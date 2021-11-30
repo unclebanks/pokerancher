@@ -1,0 +1,6 @@
+#bannerContainer {
+    grid-row: 1;
+    grid-column: 2 / 5;
+    border: 1px solid black;
+    text-align: center;
+}
