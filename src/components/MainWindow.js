@@ -8,17 +8,25 @@ export const MainWindow = () => {
     useEffect(() => {
         if(!localStorage.getItem("playerGameInfo")) {
             newPlayer();
+        } else if (JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught.length < 1) { 
+            chooseFirstPoke(); 
         } else { returningPlayer(); }
     })
 
     const newPlayer = () => {
         let playerName = prompt("Please enter your UserName.");
-        let playerInfo = {Player: {"playerName": playerName, pokeCoins: 0, pokemon: {caught: {}}}}
+        let playerInfo = {Player: {"playerName": playerName, pokeCoins: 0, pokemon: {caught:[], seen:[]}}}
         localStorage.setItem("playerGameInfo", JSON.stringify(playerInfo));
         window.location.reload();
     }
 
+    const chooseFirstPoke = () => {
+        document.getElementById("introContainer").style.display = "grid";
+        console.log(JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught);
+    }
+
     const returningPlayer = () => {
+        console.log(JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught);
         document.getElementById("introContainer").style.display = "none";
         document.getElementById("ranchContainer").style.display = "block";
         document.getElementById("helpersContainer").style.display = "grid";
@@ -54,10 +62,10 @@ export const MainWindow = () => {
                         <span>First, pick a partner Pokemon to help you start out.</span><br/>
                     </div>
                     <div id="partnerPokemonContainer">
-                        <button id="charmanderStarter" name="Charmander" onClick={e => {Pokemon.addPokemon(e.target.name)}}/>
-                        <button id="squirtleStarter" name="Squirtle" onClick={e => {Pokemon.addPokemon(e.target.name)}}/>
-                        <button id="bulbasaurStarter" name="Bulbasaur" onClick={e => {Pokemon.addPokemon(e.target.name)}}/>
-                        <button id="pikachuStarter" name="Pikachu" onClick={e => {Pokemon.addPokemon(e.target.name)}}/>
+                        <button id="charmanderStarter" name="Charmander" onClick={e => {Pokemon.addFirstPokemon(e.target.name)}}/>
+                        <button id="squirtleStarter" name="Squirtle" onClick={e => {Pokemon.addFirstPokemon(e.target.name)}}/>
+                        <button id="bulbasaurStarter" name="Bulbasaur" onClick={e => {Pokemon.addFirstPokemon(e.target.name)}}/>
+                        <button id="pikachuStarter" name="Pikachu" onClick={e => {Pokemon.addFirstPokemon(e.target.name)}}/>
                     </div>
                 </div>
             </div>

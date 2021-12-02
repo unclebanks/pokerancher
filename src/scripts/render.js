@@ -18,7 +18,6 @@ export const Renders = {
         const container = document.getElementById("helpersContainer");
         const pokeName = pokemon.name;
         button.id = pokeName;
-        button.style.backgroundImage = `url("./images/${pokeName}.png")`;
         div.appendChild(button);
         container.appendChild(div);
     }

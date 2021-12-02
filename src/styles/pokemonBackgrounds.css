@@ -1,0 +1,20 @@
+#Squirtle {
+    background-image: url('../images/pokemon/normal/front/Pikachu.png');
+}
+#Charmander {
+    background-image: url('../images/pokemon/normal/front/Pikachu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+#Bulbasaur {
+    background-image: url('../images/pokemon/normal/front/Pikachu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+}
+#Pikachu {
+    background-image: url('../images/pokemon/normal/front/Pikachu.png');
+}
