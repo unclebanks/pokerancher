@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pokerancher/static/css/main.81da3cea.chunk.css",
-    "main.js": "/pokerancher/static/js/main.1b9294db.chunk.js",
-    "main.js.map": "/pokerancher/static/js/main.1b9294db.chunk.js.map",
-    "runtime-main.js": "/pokerancher/static/js/runtime-main.356c8f6d.js",
-    "runtime-main.js.map": "/pokerancher/static/js/runtime-main.356c8f6d.js.map",
+    "main.css": "/pokerancher/static/css/main.9ebe87ca.chunk.css",
+    "main.js": "/pokerancher/static/js/main.9629a5ff.chunk.js",
+    "main.js.map": "/pokerancher/static/js/main.9629a5ff.chunk.js.map",
+    "runtime-main.js": "/pokerancher/static/js/runtime-main.9ff8882d.js",
+    "runtime-main.js.map": "/pokerancher/static/js/runtime-main.9ff8882d.js.map",
     "static/js/2.4cc61ed3.chunk.js": "/pokerancher/static/js/2.4cc61ed3.chunk.js",
     "static/js/2.4cc61ed3.chunk.js.map": "/pokerancher/static/js/2.4cc61ed3.chunk.js.map",
-    "static/js/3.aefd41b9.chunk.js": "/pokerancher/static/js/3.aefd41b9.chunk.js",
-    "static/js/3.aefd41b9.chunk.js.map": "/pokerancher/static/js/3.aefd41b9.chunk.js.map",
+    "static/js/3.9f9b02f6.chunk.js": "/pokerancher/static/js/3.9f9b02f6.chunk.js",
+    "static/js/3.9f9b02f6.chunk.js.map": "/pokerancher/static/js/3.9f9b02f6.chunk.js.map",
     "index.html": "/pokerancher/index.html",
-    "static/css/main.81da3cea.chunk.css.map": "/pokerancher/static/css/main.81da3cea.chunk.css.map",
+    "static/css/main.9ebe87ca.chunk.css.map": "/pokerancher/static/css/main.9ebe87ca.chunk.css.map",
     "static/js/2.4cc61ed3.chunk.js.LICENSE.txt": "/pokerancher/static/js/2.4cc61ed3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.356c8f6d.js",
+    "static/js/runtime-main.9ff8882d.js",
     "static/js/2.4cc61ed3.chunk.js",
-    "static/css/main.81da3cea.chunk.css",
-    "static/js/main.1b9294db.chunk.js"
+    "static/css/main.9ebe87ca.chunk.css",
+    "static/js/main.9629a5ff.chunk.js"
   ]
 }
