@@ -3,8 +3,15 @@ import '../styles/intro.css';
 
 export const Intro = () => {
 
-    let userName = JSON.parse(localStorage.getItem("playerGameInfo")).Player.playerName;
-    let firstPokemon = JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught[0].name;
+    let userName = "Temporary";
+    let firstPokemon = "None";
+
+    if (JSON.parse(localStorage.getItem("playerGameInfo"))) {
+        userName = JSON.parse(localStorage.getItem("playerGameInfo")).Player.playerName;
+        if (JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught[0] != undefined) {
+            firstPokemon = JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught[0].name;
+        }
+    }
 
     const moveIntroPage = (pageFrom, pageTo) => {
         let currentPage = document.getElementById(pageFrom);
@@ -30,7 +37,6 @@ export const Intro = () => {
                     </div>
                 </div>
                 <div id="introPage1Buttons">
-                    <button id="introContinuedContainerPrevious">Previous</button>
                     <button id="introContinuedContainerNext" onClick={() => moveIntroPage("introPage1", "introPage2")}>Next</button>
                 </div>
             </div>
@@ -45,7 +51,6 @@ export const Intro = () => {
                 <div id="introPage3Body">BodyText</div>
                 <div id="introPage3Buttons">
                     <button id="introContinuedContainerPrevious" onClick={() => moveIntroPage("introPage3", "introPage2")}>Previous</button>
-                    <button id="introContinuedContainerNext">Next</button>
                 </div>
             </div>
         </div>
