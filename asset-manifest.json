@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pokerancher/static/css/main.9ebe87ca.chunk.css",
-    "main.js": "/pokerancher/static/js/main.9629a5ff.chunk.js",
-    "main.js.map": "/pokerancher/static/js/main.9629a5ff.chunk.js.map",
+    "main.js": "/pokerancher/static/js/main.3e14efca.chunk.js",
+    "main.js.map": "/pokerancher/static/js/main.3e14efca.chunk.js.map",
     "runtime-main.js": "/pokerancher/static/js/runtime-main.9ff8882d.js",
     "runtime-main.js.map": "/pokerancher/static/js/runtime-main.9ff8882d.js.map",
     "static/js/2.4cc61ed3.chunk.js": "/pokerancher/static/js/2.4cc61ed3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9ff8882d.js",
     "static/js/2.4cc61ed3.chunk.js",
     "static/css/main.9ebe87ca.chunk.css",
-    "static/js/main.9629a5ff.chunk.js"
+    "static/js/main.3e14efca.chunk.js"
   ]
 }
