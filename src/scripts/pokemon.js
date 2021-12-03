@@ -9,7 +9,7 @@ export const Pokemon = {
         let pokeNumber = 0;
         while (pokeNumber <= playerInfo.Player.pokemon.caught.length) {
             console.log("Start Looped "+pokeNumber)
-            if (playerInfo.Player.pokemon.caught[pokeNumber].name == pokemonInformation.name) {
+            if (playerInfo.Player.pokemon.caught[pokeNumber].name === pokemonInformation.name) {
                 pokeNumber = playerInfo.Player.pokemon.caught.length;
                 console.log("Pokemon Found");
                 console.log("if statement Looped "+pokeNumber);
