@@ -7,17 +7,7 @@
     min-width: 100%;
     border: 1px solid black;
 }
-#Bulbasaur {
-    min-height: 100%;
-    min-width: 100%;
-}
-#Squirtle {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 64px;
-    height: 64px;
-}
-#Pikachu {
+#helpersContainer div button {
     background-size: contain;
     background-repeat: no-repeat;
     width: 64px;
