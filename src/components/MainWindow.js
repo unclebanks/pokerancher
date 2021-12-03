@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import '../styles/mainWindow.css';
 import { Pokemon } from "../scripts/pokemon";
 import { Renders } from "../scripts/render";
+import { IntroStart } from "../scripts/renderIntro";
 
 export const MainWindow = () => {
 
@@ -10,12 +11,14 @@ export const MainWindow = () => {
             newPlayer();
         } else if (JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught.length < 1) { 
             chooseFirstPoke(); 
+        } else if (JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught.length >= 1 && JSON.parse(localStorage.getItem("playerGameInfo")).Player.flags.finishedIntro === false) { 
+            IntroStart.renderIntro(); 
         } else { returningPlayer(); }
     })
 
     const newPlayer = () => {
         let playerName = prompt("Please enter your UserName.");
-        let playerInfo = {Player: {"playerName": playerName, pokeCoins: 0, pokemon: {caught:[], seen:[]}}}
+        let playerInfo = {Player: {"playerName": playerName, pokeCoins: 0, pokemon: {caught:[], seen:[]}, flags:{finishedIntro: false}}}
         localStorage.setItem("playerGameInfo", JSON.stringify(playerInfo));
         window.location.reload();
     }

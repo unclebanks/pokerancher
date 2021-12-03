@@ -1,4 +1,5 @@
 import POKEDEX from "./db.ts";
+import { Renders } from "./render";
 
 export const Pokemon = {
 
@@ -29,7 +30,10 @@ export const Pokemon = {
         let pokemonInformation = this.getPokemonInfo(pokeName);
         playerInfo.Player.pokemon.caught[0] = pokemonInformation;
         localStorage.setItem("playerGameInfo", JSON.stringify(playerInfo));
-        window.location.reload()
+        document.getElementById("introContainer").style.display = "none";
+        document.getElementById("introContinuedContainer").style.display = "block";
+        document.getElementById("helpersContainer").style.display = "grid";
+        Renders.renderHelpers();
     },
     getPokemonInfo: function (pokeName) {
         let pokemonInformation;
