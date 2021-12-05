@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { App } from './App';
 import './index.css';
-import { MainWindow } from './components/MainWindow';
 import reportWebVitals from './reportWebVitals';
-import { Banner } from './components/Banner';
-import { PokemonHelpers } from './components/PokemonHelpers';
-import { Intro } from './components/Intro';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainWindow />
-    <Banner />
-    <PokemonHelpers />
-    <Intro />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

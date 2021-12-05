@@ -1,0 +1,5 @@
+#playerItemsContainer {
+    grid-column: 3;
+    grid-row: 5;
+    border: 1px solid black;
+}

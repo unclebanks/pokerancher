@@ -1,0 +1,44 @@
+#introContainer {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+#introHeader {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    text-align: center;
+}
+#introBody {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+#charmanderStarter {
+    background-image: url("../images/pokemon/normal/front/Charmander.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+#squirtleStarter {
+    background-image: url("../images/pokemon/normal/front/Squirtle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+#bulbasaurStarter {
+    background-image: url("../images/pokemon/normal/front/Bulbasaur.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+#pikachuStarter {
+    background-image: url("../images/pokemon/normal/front/Pikachu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+#rancherImage {
+    background-image: url("../images/pokemon/normal/front/Blastoise.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
