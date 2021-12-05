@@ -44,11 +44,7 @@ export const App = () => {
                 introContainer: true,
                 ranchContainer: false
             },
-            introStatus: {
-                page1: "grid",
-                page2: "none",
-                page3: "none"
-            },
+            introStatus: "page1",
             playerItemsStatus: {
                 empty: ""
             },
@@ -121,52 +117,12 @@ export const App = () => {
         document.getElementById("helpersContainer").style.display = "grid";
         Renders.renderHelpers();
     }
-    const changePage = (pageTo, pageFrom, pageOther) => {
-        switch(pageTo) {
-            case "page1": pageTo = "page1";
-            break;
-            case "page2": pageTo = "page2";
-            break;
-            case "page3": pageTo = "page3";
-            break;
-            default: pageTo = "page1";
-            break;
-        }
-        switch(pageFrom) {
-            case "page1": pageFrom = "page1";
-            break;
-            case "page2": pageFrom = "page2";
-            break;
-            case "page3": pageFrom = "page3";
-            break;
-            default: pageFrom = "page2";
-            break;
-        }
-        switch(pageOther) {
-            case "page1": pageOther = "page1";
-            break;
-            case "page2": pageOther = "page2";
-            break;
-            case "page3": pageOther = "page3";
-            break;
-            default: pageOther = "page3";
-            break;
-        }
-        console.log("changing page "+pageTo);
-        console.log(game.Game.introStatus[pageFrom]);
-        game.Game.introStatus[pageTo] = "grid";
-        game.Game.introStatus[pageFrom] = "none";
-        game.Game.introStatus[pageOther] = "none";
-    }
     return(
         <div id="appContainer">
             <MainWindow addFirst={addFirstPokemon} />
             <Banner playerName={getPlayerName()}/>
             <PokemonHelpers />
-            <Intro 
-                introPageStatus={game.Game.introStatus}
-                changePage={changePage}
-            />
+            <Intro introPageStatus={game.Game.introStatus} />
             <PlayerItems />
         </div>
     )
