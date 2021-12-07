@@ -17,8 +17,3 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-#ranchContainer {
-    display: none;
-    grid-column: 3;
-    grid-row: 3;
-}

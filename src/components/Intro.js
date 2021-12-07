@@ -4,12 +4,12 @@ import { IntroPage1 } from "./subcomponents/IntroPage1";
 import { IntroPage2 } from "./subcomponents/IntroPage2";
 import { IntroPage3 } from "./subcomponents/IntroPage3";
 
-export const Intro = ({introPageStatus}) => {
+export const Intro = (props) => {
 
     let userName = "Temporary";
     let firstPokemon = "None";
     let returnedPage;
-    switch(introPageStatus) {
+    switch(props.currentIntroPage) {
         // Need to change this to have the username passed from app
         case "page1": returnedPage = <IntroPage1 userName={userName}/>
         break;
@@ -18,18 +18,18 @@ export const Intro = ({introPageStatus}) => {
         case "page3": returnedPage = <IntroPage3 />
         break;
     }
-    console.log(introPageStatus);
+    console.log(props.currentIntroPage);
 
     if (JSON.parse(localStorage.getItem("playerGameInfo"))) {
-        userName = JSON.parse(localStorage.getItem("playerGameInfo")).Player.playerName;
-        if (JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught[0] !== undefined) {
-            firstPokemon = JSON.parse(localStorage.getItem("playerGameInfo")).Player.pokemon.caught[0].name;
+        userName = JSON.parse(localStorage.getItem("playerGameInfo")).playerName;
+        if (JSON.parse(localStorage.getItem("playerGameInfo")).pokemon.caught[0] !== undefined) {
+            firstPokemon = JSON.parse(localStorage.getItem("playerGameInfo")).pokemon.caught[0].name;
         }
     }
 
     const finishIntro = () => {
         let player = JSON.parse(localStorage.getItem("playerGameInfo"));
-        player.Player.flags.finishedIntro = true;
+        player.flags.finishedIntro = true;
         console.log(JSON.stringify(player));
         localStorage.setItem("playerGameInfo", JSON.stringify(player));
         window.location.reload();
