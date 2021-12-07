@@ -1,6 +1,3 @@
-#introPage2, #introPage3 {
-    display: none;
-}
 #introContinuedContainer {
     grid-column: 3;
     grid-row: 3;
@@ -9,7 +6,7 @@
 #introContinuedTitle {
     text-align: center;
 }
-#introPage1 {
+#introPage1, #introPage2, #introPage3 {
     display: grid;
     grid-template-rows: 9fr 1fr;
 }

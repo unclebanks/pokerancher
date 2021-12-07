@@ -1,11 +1,15 @@
 import React from "react";
 
-export const IntroPage1 = (userName) => {
+export const IntroPage1 = (props) => {
+
+    const changePage = (newPage) => {
+        props.changePageBypass(newPage);
+    }
     return(
         <div id="introPage1">
             <div id="introPage1Body">
                 <div>
-                    <span>Hi Again {userName.userName}!</span><br/>
+                    <span>Hi Again {props.userName}!</span><br/>
                     <span>That POKEMON fits you perfectly.</span><br/>
                     <span>Now that you have a POKEMON,<br/> let me explain a bit more about what we do here.</span><br/><br/>
                     <span>As you know we are a POKEMON Ranch<br/> that raises POKEMON, and researches them too.</span><br/>
@@ -15,7 +19,7 @@ export const IntroPage1 = (userName) => {
                 </div>
             </div>
             <div id="introPage1Buttons">
-                <button id="introContinuedContainerNext">Next</button>
+                <button id="introContinuedContainerNext" onClick={() => {changePage("page2")}}>Next</button>
             </div>
         </div>
     )

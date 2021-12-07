@@ -104,7 +104,7 @@ export const App = () => {
     } else { returningPlayer(); }
     return(
         <div id="appContainer">
-            <MainWindow addFirst={addFirstPokemon} mainWindowStatus={game.mainWindowStatus} currentIntroPage={game.introStatus}/>
+            <MainWindow addFirst={addFirstPokemon} gameStatus={game} playerName={player.playerName} />
             <Banner playerName={player.playerName}/>
             {pokemonHelpers}
             <PlayerItems />
