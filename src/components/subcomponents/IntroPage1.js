@@ -2,9 +2,6 @@ import React from "react";
 
 export const IntroPage1 = (props) => {
 
-    const changePage = (newPage) => {
-        props.changePageBypass(newPage);
-    }
     return(
         <div id="introPage1">
             <div id="introPage1Body">
@@ -19,7 +16,7 @@ export const IntroPage1 = (props) => {
                 </div>
             </div>
             <div id="introPage1Buttons">
-                <button id="introContinuedContainerNext" onClick={() => {changePage("page2")}}>Next</button>
+                <button id="introContinuedContainerNext" onClick={() => {props.changePageBypass("page2")}}>Next</button>
             </div>
         </div>
     )
