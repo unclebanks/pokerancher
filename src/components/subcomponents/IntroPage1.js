@@ -1,21 +1,20 @@
 import React from "react";
+import '../../styles/introPages/introPage1.css';
 
-export const IntroPage1 = (userName) => {
+export const IntroPage1 = (props) => {
+
     return(
         <div id="introPage1">
+            <div id="tempLabImage">Need an image here or something idk</div>
             <div id="introPage1Body">
-                <div>
-                    <span>Hi Again {userName.userName}!</span><br/>
+                <div id="page1BodyContent">
+                    <span>Hi Again {props.userName}!</span><br/>
                     <span>That POKEMON fits you perfectly.</span><br/>
-                    <span>Now that you have a POKEMON,<br/> let me explain a bit more about what we do here.</span><br/><br/>
-                    <span>As you know we are a POKEMON Ranch<br/> that raises POKEMON, and researches them too.</span><br/>
-                    <span>With the continuing emergence of<br/> information regarding POKEMON,<br/>our workload has gotten a bit overwhelming.</span><br/>
-                    <span>Your particular job in this is to assist us<br/> with our various tasks.</span><br/>
-                    <span>Don't worry,<br/> it sounds like a lot but we will start you off slowly.</span>
+                    <span>Not sure what to put here. :/</span>
                 </div>
             </div>
             <div id="introPage1Buttons">
-                <button id="introContinuedContainerNext">Next</button>
+                <button id="introContinuedContainerNext" onClick={() => {props.changePageBypass("page2")}}>Next</button>
             </div>
         </div>
     )

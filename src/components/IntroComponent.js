@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/introContainer.css';
-import { Pokemon } from "../scripts/pokemon";
 
 export const IntroContainer = ({addFirstPokemon}) => {
 
