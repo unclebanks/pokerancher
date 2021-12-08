@@ -4,25 +4,19 @@ import '../styles/pokemonBackgrounds.css';
 
 export const PokemonHelpers = (props) => {
 
-    //Split each pokemon square into its own component and render through while funciton.
-    const renderIndividual = (pokemon) => {
-        console.log("=++++++++"+pokemon.name)
-        // let div = document.createElement("div");
-        // let button = document.createElement("button");
-        // let container = document.getElementById("helpersContainer");
-        // let pokeName = pokemon.name;
-        // button.id = pokeName;
-        // div.appendChild(button);
-        // container.appendChild(div);
-    }
-    console.log(props.playersPokemon.caught.length+" playersPokemon");
-    let i = 0;
-    while (i < props.playersPokemon.caught.length) {
-        //console.log(props.playersPokemon.caught[i]);
-        renderIndividual(props.playersPokemon.caught[i]);
-        i++;
-    }
     return(
-        <div id="helpersContainer">HELPERS</div>
+        <div id="helpersContainer">
+            <div id="pokemonHelpers">
+                {props.playersPokemon.caught.map(
+                    pokemon => (
+                        <div key={pokemon.name}>
+                            <button id={pokemon.name}></button><br/>
+                            <span>{pokemon.name}</span><br/>
+                            <span>HP: {pokemon.stats.hp}</span>
+                        </div>
+                    )
+                )}
+            </div>
+        </div>
     )
 }

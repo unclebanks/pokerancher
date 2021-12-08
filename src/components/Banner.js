@@ -3,6 +3,11 @@ import '../styles/banner.css';
 
 export const Banner = (props) => {
     return(
-        <div id="bannerContainer">Welcome to PokeRancher {props.playerStatus.playerName} </div>
+        <div id="bannerContainer">
+            <div id="bannerSpan">
+                <span>Welcome to PokeRancher {props.playerStatus.playerName} </span>
+            </div>
+            <div id="pokeGearContainer">PokeGear stuff here</div>
+        </div>
     )
 }

@@ -63,6 +63,7 @@ export const App = () => {
     const addFirstPokemon = function(pokeName) {
         let pokemonInformation = Pokemon.getPokemonInfo(pokeName);
         player.pokemon.caught[0] = pokemonInformation;
+        player.pokemon.seen[0] = pokemonInformation;
         console.log("This is player after adding the first POKEMON "+pokeName+"============"+player)
         localStorage.setItem("playerGameInfo", JSON.stringify(player));
         window.location.reload();
@@ -105,7 +106,7 @@ export const App = () => {
             <MainWindow addFirst={addFirstPokemon} gameStatus={game} playerStatus={player} />
             <Banner playerStatus={player}/>
             <PokemonHelpers playersPokemon={player.pokemon} pkHelperDisplay={player.flags.finishedIntro}/>
-            <PlayerItems />
+            <PlayerItems player={player}/>
         </div>
     )
 }

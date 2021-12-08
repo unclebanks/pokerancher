@@ -1,5 +1,8 @@
 #playerItemsContainer {
-    grid-column: 3;
-    grid-row: 5;
+    grid-column: 5;
+    grid-row: 3;
     border: 1px solid black;
+}
+#playerItemsSpan {
+    text-align: center;
 }
