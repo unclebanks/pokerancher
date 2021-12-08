@@ -1,5 +1,28 @@
 #ranchContainer {
-    display: none;
+    border: 1px solid black;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr;
+    text-align: center;
+}
+#ranchTitle {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+#guildButton {
+    grid-row: 4;
+    grid-column: 1;
+}
+#dungeonButton {
+    grid-row: 2;
+    grid-column: 1;
+}
+#farmButton {
+    grid-row: 2;
     grid-column: 3;
-    grid-row: 3;
+}
+#labButton {
+    grid-row: 4;
+    grid-column: 3;
 }

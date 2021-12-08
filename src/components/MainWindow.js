@@ -20,7 +20,7 @@ export const MainWindow = (props) => {
             mainToReturn = <Ranch />
         break;
         case "hasPoke":
-            mainToReturn = <Intro currentIntroPage={props.gameStatus.introStatus} userName={props.playerName}/>
+            mainToReturn = <Intro currentIntroPage={props.gameStatus.introStatus} userName={props.playerStatus.playerName}/>
         break;
     }
     return(

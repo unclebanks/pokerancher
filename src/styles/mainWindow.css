@@ -2,6 +2,7 @@
     grid-column: 3;
     grid-row: 3;
     border: 1px solid black;
+    min-height: 100%;
 }
 #rancherImage {
     grid-row: 1;

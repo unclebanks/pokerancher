@@ -37,7 +37,6 @@ export const App = () => {
                 empty: ""
             }
     }
-    let pokemonHelpers;
     const newPlayer = () => {
         let playerUserName = prompt("Please enter your UserName.");
         player["playerName"] = playerUserName;
@@ -54,12 +53,11 @@ export const App = () => {
         player.flags = savedPlayer.flags;
         console.log(player);
         player.saveLoaded = 1;
-        if(savedPlayer.flags.introFinished === true) {
+        if(player.flags.finishedIntro === true) {
             game.mainWindowStatus = "ranch";
         }
-        if (player.pokemon.caught.length >= 1) {
+        if (player.pokemon.caught.length >= 1 && player.flags.finishedIntro === false) {
             game.mainWindowStatus = "hasPoke";
-            pokemonHelpers = <PokemonHelpers playersPokemon={player.pokemon} pkHelperDisplay={player.flags.finishedIntro}/>
         }
     }
     const addFirstPokemon = function(pokeName) {
@@ -104,9 +102,9 @@ export const App = () => {
     } else { returningPlayer(); }
     return(
         <div id="appContainer">
-            <MainWindow addFirst={addFirstPokemon} gameStatus={game} playerName={player.playerName} />
-            <Banner playerName={player.playerName}/>
-            {pokemonHelpers}
+            <MainWindow addFirst={addFirstPokemon} gameStatus={game} playerStatus={player} />
+            <Banner playerStatus={player}/>
+            <PokemonHelpers playersPokemon={player.pokemon} pkHelperDisplay={player.flags.finishedIntro}/>
             <PlayerItems />
         </div>
     )

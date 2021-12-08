@@ -1,0 +1,13 @@
+#introPage1 {
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: 5fr 4fr 1fr;
+    border: 1px solid gray;
+}
+#introPage1Body {
+    border: 4px dotted black;
+    grid-row: 2;
+}
+#introPage1Buttons {
+    grid-row: 3;
+}
