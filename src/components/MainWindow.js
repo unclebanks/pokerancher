@@ -10,14 +10,13 @@ export const MainWindow = (props) => {
         props.addFirst(pokeName);
         console.log("MainWindowPokeName "+pokeName);
     }
-    console.log(JSON.stringify(props))
     let mainToReturn;
     switch(props.gameStatus.mainWindowStatus) {
         case "intro":
             mainToReturn = <IntroContainer addFirstPokemon={addFirstWorkAround} />
         break;
         case "ranch":
-            mainToReturn = <Ranch />
+            mainToReturn = <Ranch gameStatus={props.gameStatus}/>
         break;
         case "hasPoke":
             mainToReturn = <Intro currentIntroPage={props.gameStatus.introStatus} userName={props.playerStatus.playerName}/>

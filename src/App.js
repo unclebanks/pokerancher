@@ -35,7 +35,8 @@ export const App = () => {
             },
             pokemonHelperStatus: {
                 empty: ""
-            }
+            },
+            ranchStatus: "main"
     }
     const newPlayer = () => {
         let playerUserName = prompt("Please enter your UserName.");
