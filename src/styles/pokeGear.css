@@ -1,0 +1,18 @@
+#pokeGearContainer {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+#pokeGearLeftButtons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+#pokeGearRightButtons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+#pokeGearDisplay {
+    border: 2px solid gray;
+    background-color: black;
+    color: lightgreen;
+}

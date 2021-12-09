@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/banner.css';
+import { PokeGear } from "./PokeGear";
 
 export const Banner = (props) => {
     return(
@@ -7,7 +8,7 @@ export const Banner = (props) => {
             <div id="bannerSpan">
                 <span>Welcome to PokeRancher {props.playerStatus.playerName} </span>
             </div>
-            <div id="pokeGearContainer">PokeGear stuff here</div>
+            <PokeGear />
         </div>
     )
 }
