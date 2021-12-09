@@ -1,29 +1,42 @@
-## Welcome to PokeRancher
+# Welcome to PokeRancher
 
-Since this project is in its' infancy I do not see a need for a real readme yet. So instead I will leave these links for anyone that needs them or is curious about learning react (since I probably am not using it completely properly).
+This is an idle game based off of the popular POKEMON series by Nintendo (and GameFreak, Monsters, whomever else I am missing. I just DO NOT OWN ANY OF IT!!!). The concept of the game is that you are going to aid a Pokemon Prof with their work. This will be accomplished by maintaining a berry farm, frequently exploring dungeons, accepting/completing quests, and creating/growing a guild. Below these features will be further explained
 
-## Getting Started with Create React App
+## Prof. Lab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This area will contain:
+    1. The Pokemon Prof (duh)
+    2. 'Research Machine'
+        - Upgrade equipment
+        - Study items (no spoiler)
+    3. 'Evolution Machine'
+    4. 'Communication Device
 
-## Available Scripts
+## Berry Farm
 
-In the project directory, you can run:
+This area will contain:
+    1. Berry fields
+    2. Tool Shed
 
-### `npm start`
+## Dungeons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This area will contain:
+    1. Various Dungeons (duh)
+    2. Safe Houses
+    3. Traveling Merchants
+    4. Maybe More? (No Spoiler)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Guild
 
-## Learn More
+This area will contain:
+    1. Quest Board
+    2. Common room for wandering pokemon
+    3. Merchants
+    4. Surprise
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to play?
+The core gameplay elements are collecting POKEMON through various means utilizing the different facilities to do so. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## TODOS
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Implement everything :/
