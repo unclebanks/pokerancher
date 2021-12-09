@@ -40,19 +40,17 @@ export const App = () => {
     }
     const newPlayer = () => {
         let playerUserName = prompt("Please enter your UserName.");
-        player["playerName"] = playerUserName;
+        player.playerName = playerUserName;
         localStorage.setItem("playerGameInfo", JSON.stringify(player));
-        console.log(player);
         window.location.reload();
     }
     const loadPlayer = () => {
         let savedPlayer = JSON.parse(localStorage.getItem("playerGameInfo"));
         player.playerName = savedPlayer.playerName;
-        player.currency.apples = savedPlayer.apples;
-        player.currency.pokeCoins = savedPlayer.pokeCoins;
+        player.currency.apples = savedPlayer.currency.apples;
+        player.currency.pokeCoins = savedPlayer.currency.pokeCoins;
         player.pokemon = savedPlayer.pokemon;
         player.flags = savedPlayer.flags;
-        console.log(player);
         player.saveLoaded = 1;
         if(player.flags.finishedIntro === true) {
             game.mainWindowStatus = "ranch";
@@ -65,34 +63,26 @@ export const App = () => {
         let pokemonInformation = Pokemon.getPokemonInfo(pokeName);
         player.pokemon.caught[0] = pokemonInformation;
         player.pokemon.seen[0] = pokemonInformation;
-        console.log("This is player after adding the first POKEMON "+pokeName+"============"+player)
         localStorage.setItem("playerGameInfo", JSON.stringify(player));
         window.location.reload();
     }
     const chooseFirstPoke = () => {
         loadPlayer();
-        console.log("choose first pokemon");
     }
     const addPokemon = function(pokeName) {
         let pokemonInformation = Pokemon.getPokemonInfo(pokeName);
         let pokeNumber = 0;
         while (pokeNumber <= player.pokemon.caught.length) {
-            console.log("Start Looped "+pokeNumber)
             if (player.pokemon.caught[pokeNumber].name === pokemonInformation.name) {
                 pokeNumber = player.pokemon.caught.length;
-                console.log("Pokemon Found");
-                console.log("if statement Looped "+pokeNumber);
             }
             pokeNumber++;
             if (pokeNumber === player.pokemon.caught.length) {
                 player.pokemon.caught[pokeNumber++] = pokemonInformation;
-                console.log("pokemon added "+pokeNumber);
                 pokeNumber++;
                 localStorage.setItem("playerGameInfo", JSON.stringify(player));
             }
-            console.log("Ended Looped "+pokeNumber)
         }
-        console.log("This is player after adding "+pokeName+"============"+player);
     }
     const returningPlayer = () => {
         loadPlayer();

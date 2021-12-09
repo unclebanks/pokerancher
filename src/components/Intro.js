@@ -16,7 +16,6 @@ export const Intro = (props) => {
             case "page1": setPage(<IntroPage1 userName={userName} changePageBypass={changePageBypass}/>)
             break;
             case "page2": setPage(<IntroPage2 changePageBypass={changePageBypass}/>);
-            console.log("changed to "+newPage)
             break;
             case "page3": setPage(<IntroPage3 changePageBypass={changePageBypass}/>)
             break;
@@ -35,7 +34,6 @@ export const Intro = (props) => {
     const finishIntro = () => {
         let player = JSON.parse(localStorage.getItem("playerGameInfo"));
         player.flags.finishedIntro = true;
-        console.log(JSON.stringify(player));
         localStorage.setItem("playerGameInfo", JSON.stringify(player));
         window.location.reload();
     }

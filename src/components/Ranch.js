@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../styles/ranch.css';
 import { PokeDungeons } from "./PokeDungeons";
 import { PokeFarm } from "./PokeFarm";
@@ -7,21 +7,27 @@ import { ProfLab } from "./ProfLab";
 import { MainRanch } from "./MainRanch";
 
 export const Ranch = (props) => {
-    console.log(props.gameStatus);
     let ranchReturn = props.gameStatus.ranchStatus;
-    let returnedComponent;
-    switch(ranchReturn) {
-        case "main": returnedComponent = <MainRanch />;
-        break;
-        case "profLab": returnedComponent = <ProfLab />;
-        break;
-        case "pokeGuild": returnedComponent = <PokeGuild />;
-        break;
-        case "pokeDungeons": returnedComponent = <PokeDungeons />;
-        break;
-        case "pokeFarm": returnedComponent = <PokeFarm />;
-        break;
-        default: returnedComponent = <MainRanch />;
+    const changeRanchPage = (newPage) => {
+        ranchSwitch(newPage);
+        console.log("Page changed "+ranchReturn);
+    }
+    const [returnedComponent, setReturnedComponent] = useState(<MainRanch changePage={changeRanchPage}/>)
+    
+    const ranchSwitch = (ranchReturn) => {
+        switch(ranchReturn) {
+            case "main": setReturnedComponent(<MainRanch changePage={changeRanchPage}/>);
+            break;
+            case "profLab": setReturnedComponent(<ProfLab />);
+            break;
+            case "pokeGuild": setReturnedComponent(<PokeGuild />);
+            break;
+            case "pokeDungeons": setReturnedComponent(<PokeDungeons />);
+            break;
+            case "pokeFarm": setReturnedComponent(<PokeFarm />);
+            break;
+            default: setReturnedComponent(<MainRanch changePage={changeRanchPage}/>);
+        }
     }
     return(
         <div id="ranchContainer">

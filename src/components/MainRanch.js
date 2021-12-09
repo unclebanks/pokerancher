@@ -1,12 +1,13 @@
 import React from "react";
 
-export const MainRanch = () => {
+export const MainRanch = (props) => {
+    console.log(props);
     return(
         <div id="mainRanchContainer">
-            <button id="labButton">Prof. Lab</button>
-            <button id="guildButton">Guild</button>
-            <button id="dungeonButton">Dungeons</button>
-            <button id="farmButton">Farm</button>
+            <button id="labButton" onClick={() => {props.changePage("profLab");}}>Prof. Lab</button>
+            <button id="guildButton" onClick={() => {props.changePage("pokeGuild");}}>Guild</button>
+            <button id="dungeonButton" onClick={() => {props.changePage("pokeDungeons");}}>Dungeons</button>
+            <button id="farmButton" onClick={() => {props.changePage("pokeFarm");}}>Farm</button>
         </div>
     )
 }

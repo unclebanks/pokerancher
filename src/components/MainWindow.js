@@ -8,7 +8,6 @@ export const MainWindow = (props) => {
 
     const addFirstWorkAround = (pokeName) => {
         props.addFirst(pokeName);
-        console.log("MainWindowPokeName "+pokeName);
     }
     let mainToReturn;
     switch(props.gameStatus.mainWindowStatus) {

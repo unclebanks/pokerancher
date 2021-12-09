@@ -5,7 +5,6 @@ export const IntroContainer = ({addFirstPokemon}) => {
 
     const addFirstToPlayer = (pokeName) => {
         addFirstPokemon(pokeName);
-        console.log("IntroContainerPokeName "+pokeName);
     }
     return(
         <div id="introContainer">
