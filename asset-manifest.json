@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pokerancher/static/css/main.5f2f54c4.chunk.css",
+    "main.css": "/pokerancher/static/css/main.346712d3.chunk.css",
     "main.js": "/pokerancher/static/js/main.2ee7fc2b.chunk.js",
     "main.js.map": "/pokerancher/static/js/main.2ee7fc2b.chunk.js.map",
     "runtime-main.js": "/pokerancher/static/js/runtime-main.955fced7.js",
@@ -10,13 +10,13 @@
     "static/js/3.71a78e73.chunk.js": "/pokerancher/static/js/3.71a78e73.chunk.js",
     "static/js/3.71a78e73.chunk.js.map": "/pokerancher/static/js/3.71a78e73.chunk.js.map",
     "index.html": "/pokerancher/index.html",
-    "static/css/main.5f2f54c4.chunk.css.map": "/pokerancher/static/css/main.5f2f54c4.chunk.css.map",
+    "static/css/main.346712d3.chunk.css.map": "/pokerancher/static/css/main.346712d3.chunk.css.map",
     "static/js/2.fce38e00.chunk.js.LICENSE.txt": "/pokerancher/static/js/2.fce38e00.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.955fced7.js",
     "static/js/2.fce38e00.chunk.js",
-    "static/css/main.5f2f54c4.chunk.css",
+    "static/css/main.346712d3.chunk.css",
     "static/js/main.2ee7fc2b.chunk.js"
   ]
 }
