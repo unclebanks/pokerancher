@@ -59,6 +59,10 @@ export const App = () => {
             game.mainWindowStatus = "hasPoke";
         }
     }
+    const addPokeCoins = () => {
+        player.currency.pokeCoins++;
+        document.getElementById("pokeCoins").innerHTML = player.currency.pokeCoins;
+    }
     const addFirstPokemon = function(pokeName) {
         let pokemonInformation = Pokemon.getPokemonInfo(pokeName);
         player.pokemon.caught[0] = pokemonInformation;
@@ -95,7 +99,7 @@ export const App = () => {
     return(
         <div id="appContainer">
             <MainWindow addFirst={addFirstPokemon} gameStatus={game} playerStatus={player} />
-            <Banner playerStatus={player}/>
+            <Banner playerStatus={player} addPokeCoins={addPokeCoins}/>
             <PokemonHelpers playersPokemon={player.pokemon} pkHelperDisplay={player.flags.finishedIntro}/>
             <PlayerItems player={player}/>
         </div>
