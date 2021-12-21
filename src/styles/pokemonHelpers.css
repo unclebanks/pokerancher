@@ -10,8 +10,8 @@
 #helpersContainer button {
     background-size: contain;
     background-repeat: no-repeat;
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
 }
 #pokemonHelpers {
     overflow: auto;
